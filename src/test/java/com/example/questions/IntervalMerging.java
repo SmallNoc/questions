@@ -33,11 +33,15 @@ public class IntervalMerging {
             int[] curInterval  = ints[i];
             //每次新遍历到的列表与当前结果集中的最后一个区间的末尾端点进行比较
             int[] peek = res.get(res.size()-1);
-            if (curInterval[0] > peek[1]){
+            if (curInterval[0] > peek[1] && curInterval[0] < curInterval[1]){
                 res.add(curInterval);
             }else {
                 //比较最大值放入 最右端
-                peek[1] = Math.max(curInterval[1],peek[1]);
+                if(curInterval[0] > curInterval[1]){
+                    peek[1] = Math.max(curInterval[0],peek[1]);
+                }else {
+                    peek[1] = Math.max(curInterval[1], peek[1]);
+                }
             }
         }
         return res.toArray(new int[res.size()][]);
