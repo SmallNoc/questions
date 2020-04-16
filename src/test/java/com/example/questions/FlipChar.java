@@ -17,7 +17,7 @@ public class FlipChar {
      */
 
     protected static void UpsideDown(String str){
-        List  strList = Arrays.asList(str.trim().split(" +"));
+        List  strList = Arrays.asList(str.trim().split(" +"));//正则匹配空格分隔字符
         Collections.reverse(strList);//翻转
         System.out.println(String.join(" ", strList));//连接字符输出
     }
