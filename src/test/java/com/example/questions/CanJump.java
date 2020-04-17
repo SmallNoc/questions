@@ -12,6 +12,7 @@ public class CanJump {
 
 
     /**
+     *
      * {2, 3, 1, 1, 4}
      * 我们一开始在位置 0，可以跳跃的最大长度为 2，因此最远可以到达的位置被更新为 2；
      * 我们遍历到位置1，由于 1≤2，因此位置 1 可达。我们用 1 加上它可以跳跃的最大长度 3，
@@ -45,6 +46,7 @@ public class CanJump {
                 return false;
             }else {
                 x = Math.max(x,i+ints[i]);
+                if(x > ints.length-1) return true;
             }
         }
         return true;

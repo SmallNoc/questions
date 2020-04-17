@@ -32,18 +32,10 @@ public class IntervalMerging {
             int[] curInterval  = ints[i];
             //每次新遍历到的列表与当前结果集中的最后一个区间的末尾端点进行比较
             int[] peek = res.get(res.size()-1);
-            if (curInterval[0] > peek[1] && curInterval[0] < curInterval[1]){
+            if (curInterval[0] > peek[1]){
                 res.add(curInterval);
             }else {
-                //比较最大值放入 最右端
-//                if(curInterval[0] == curInterval[1]){
-//                    res.add(curInterval);
-//                }
-//                if(curInterval[0] > curInterval[1]){
-//                    peek[1] = Math.max(curInterval[0],peek[1]);
-//                }else {
-                    peek[1] = Math.max(curInterval[1], peek[1]);
-//                }
+                peek[1] = Math.max(curInterval[1], peek[1]);
             }
         }
         return res.toArray(new int[res.size()][]);
@@ -51,11 +43,8 @@ public class IntervalMerging {
 
     public static void main(String[] args) {
         IntervalMerging  IM = new IntervalMerging();
-
-        int [][] ints= {{6,9},{1,3},{6,6},{2,4},{7,7},{16,20},{0,4},{13,67},{55,76},{99,101},{30,35}};
-
-        int[][] newInts = IM.merge(ints);
-
+        int [][] ints= {{6,9},{1,3},{10,10},{2,4},{2,3},{2,6},{11,11},{16,20},{0,4},{13,67},{55,76},{99,101},{30,35}};
+        int [][] newInts = IM.merge(ints);
         for(int i = 0;i<newInts.length;i++){
             System.out.println("区间为 ="+ Arrays.toString(newInts[i]));
         }
