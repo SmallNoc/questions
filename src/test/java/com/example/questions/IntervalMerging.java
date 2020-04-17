@@ -1,6 +1,5 @@
 package com.example.questions;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -37,11 +36,14 @@ public class IntervalMerging {
                 res.add(curInterval);
             }else {
                 //比较最大值放入 最右端
-                if(curInterval[0] > curInterval[1]){
-                    peek[1] = Math.max(curInterval[0],peek[1]);
-                }else {
+//                if(curInterval[0] == curInterval[1]){
+//                    res.add(curInterval);
+//                }
+//                if(curInterval[0] > curInterval[1]){
+//                    peek[1] = Math.max(curInterval[0],peek[1]);
+//                }else {
                     peek[1] = Math.max(curInterval[1], peek[1]);
-                }
+//                }
             }
         }
         return res.toArray(new int[res.size()][]);
@@ -50,7 +52,7 @@ public class IntervalMerging {
     public static void main(String[] args) {
         IntervalMerging  IM = new IntervalMerging();
 
-        int [][] ints= {{6,9},{1,3},{2,4},{77,22},{16,20},{0,4},{13,67},{55,76},{99,101},{30,35}};
+        int [][] ints= {{6,9},{1,3},{6,6},{2,4},{7,7},{16,20},{0,4},{13,67},{55,76},{99,101},{30,35}};
 
         int[][] newInts = IM.merge(ints);
 
