@@ -40,7 +40,7 @@ public class HappyNum {
         HappyNum happyNum = new HappyNum();
 //        happyNum.isHappyNum(num);
         System.out.println(happyNum.isHappyNum(14));
-        System.out.println(happyNum.isHappyNum1(14));
+        System.out.println(happyNum.isHappyNum1(19));
     }
 
 
