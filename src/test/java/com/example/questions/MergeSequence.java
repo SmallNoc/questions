@@ -29,7 +29,7 @@ public class MergeSequence {
         Mylink mylink2 = new Mylink();
         Mylink mylink3 = new Mylink();
         Mylink mylink4= new Mylink();
-        mylink1.addNodeFirst(1);
+        mylink1.addNodeFirst(-1);
         mylink1.addNodeFirst(12);
         mylink1.addNodeFirst(3);
         mylink2.addNodeFirst(11);
