@@ -15,7 +15,8 @@ public class MinStack {
 
     public static void main(String[] args) {
         MinStack test = new MinStack();
-        test.push(-1);
+        test.push(1);
+        test.push(-3);
         test.push(-3);
         test.push(5);
         test.push(7);
@@ -32,6 +33,7 @@ public class MinStack {
         test.push1(-4);
         test.push1(6);
         test.push1(8);
+        test.push1(-4);
         System.out.println(test.getMin1());
         System.out.println(test.top1());
         test.pop1();
@@ -40,6 +42,7 @@ public class MinStack {
 
         MinStack test2 = new MinStack("方法三");
         test2.push2(-2);
+        test2.push2(-4);
         test2.push2(-4);
         test2.push2(6);
         test2.push2(8);
@@ -67,7 +70,7 @@ public class MinStack {
         //先把值x压入栈中
         dataStack.push(x);
         //如果x是最小值，把x也压入辅助栈中
-        if (minStack.isEmpty() || x < minStack.peek()){
+        if (minStack.isEmpty() || x <= minStack.peek()){
             minStack.push(x);
         }
     }
