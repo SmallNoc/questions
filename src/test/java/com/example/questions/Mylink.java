@@ -152,6 +152,7 @@ public class Mylink<T> {
         }
         if(length() == 1){
             removeFirst();
+            return;
         }
         ListNode preNode = head;//记录倒数第二个节点
         ListNode curNode = head;//记录当前节点
