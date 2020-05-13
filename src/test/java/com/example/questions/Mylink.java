@@ -223,7 +223,7 @@ public class Mylink<T> {
     public static void main(String[] args) {
         Mylink mylink = new Mylink();
         mylink.addNodeLast(1);
-        mylink.addNodeLast(2);
+        mylink.addNodeLast(21);
         mylink.addNodeLast(3);
         mylink.addNodeLast(72);
         mylink.addNodeLast(5);

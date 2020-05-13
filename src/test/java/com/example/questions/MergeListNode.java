@@ -32,7 +32,7 @@ public class MergeListNode {
         Mylink mylink2 = new Mylink();
         mylink1.addNodeLast(1);
         mylink1.addNodeLast(3);
-        mylink1.addNodeLast(5);
+        mylink1.addNodeLast(51);
         mylink1.addNodeLast(7);
         mylink1.addNodeLast(9);
 
