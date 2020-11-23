@@ -47,6 +47,7 @@ public class CanJump {
             }else {
                 x = Math.max(x,i+ints[i]);
                 if(x > ints.length-1) return true;
+
             }
         }
         return true;
